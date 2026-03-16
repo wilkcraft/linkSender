@@ -1,0 +1,58 @@
+name: Link-Sender
+version: 1.3.0
+main: com.linksender.LinkSender
+api-version: 1.21
+author: Wilkcraft
+
+commands:
+  link:
+    description: Link system
+    usage: /link
+
+permissions:
+  link.create:
+    description: Create links
+    default: op
+
+  link.delete:
+    description: Delete links
+    default: op
+
+  link.list:
+    description: View link list
+    default: true
+
+  link.reload:
+    description: Reload links.yml
+    default: op
+
+  link.send:
+    description: Send links to other players
+    default: op
+
+  link.me:
+    description: Send links to yourself
+    default: true
+
+  link.*:
+    description: All permissions
+    children:
+      link.create: true
+      link.delete: true
+      link.list: true
+      link.reload: true
+      link.send: true
+      link.me: true
+
+  link.op:
+    description: Operator permissions
+    default: op
+    children:
+      link.*: true
+
+  link.default:
+    description: Basic permissions
+    default: true
+    children:
+      link.list: true
+      link.me: true
