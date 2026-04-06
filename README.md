@@ -1,37 +1,25 @@
-# Link-Sender
+# 🔗 Link-Sender
 
-A lightweight **PaperMC plugin** that allows server administrators to create, manage, and send clickable links to players directly in chat.
+**Link-Sender** is a lightweight Paper plugin that allows players to create, manage, and share clickable links directly in Minecraft chat. 🌐 Perfect for servers that want to provide easy access to websites, social media, Discord servers, or any external links.
 
-Players can easily open websites, Discord invites, store pages, or any other URL with a single click.
+## ✨ Features
 
-## Features
+- 🛠️ Create and manage links easily via commands  
+- 📤 Send clickable links to yourself or other players  
+- 🔒 Customizable permissions for full control  
+- ⚙️ Works with Minecraft Paper 1.21+  
 
-- Create clickable links directly from in-game commands
-- Send links to yourself or other players
-- Store links in a persistent `links.yml` file
-- Tab completion support
-- Permission-based system
-- Lightweight and simple configuration
-- Built for **Paper 1.21+**
+## 📜 Commands
 
-## Installation
-
-1. Download the latest release `.jar` file.
-2. Place the file in your server's `plugins` folder.
-3. Start or restart your server.
-4. The plugin will automatically generate a `links.yml` file.
-
-## Commands
-
-| Command | Description |
-|-------|-------------|
-| `/link` | Shows basic command usage |
-| `/link create <name> <url>` | Create a new link |
-| `/link delete <name>` | Delete an existing link |
-| `/link list` | View available links |
-| `/link reload` | Reload the `links.yml` file |
-| `/link <name>` | Send a link to yourself |
-| `/link <name> <player>` | Send a link to another player |
+| Command | Description | Permission |
+|---------|-------------|------------|
+| `/link` | Shows basic command usage | - |
+| `/link create <name> <url>` | ➕ Create a new link | `link.create` |
+| `/link delete <name>` | ❌ Delete an existing link | `link.delete` |
+| `/link list` | 📋 List all available links | `link.list` |
+| `/link reload` | 🔄 Reload links from `links.yml` | `link.reload` |
+| `/link <name>` | 👤 Show a clickable link to yourself | `link.me` |
+| `/link <name> <player>` | 📨 Send a clickable link to another player | `link.send` |
 
 ### Examples
 
@@ -42,21 +30,28 @@ Players can easily open websites, Discord invites, store pages, or any other URL
 /link delete discord
 ```
 
-## Permissions
+## 🔐 Permissions
 
 | Permission | Description | Default |
-|-----------|-------------|--------|
-| `link.create` | Create links | OP |
-| `link.delete` | Delete links | OP |
-| `link.list` | View link list | Everyone |
-| `link.reload` | Reload links.yml | OP |
-| `link.send` | Send links to other players | OP |
-| `link.me` | Send links to yourself | Everyone |
-| `link.*` | All permissions | OP |
-| `link.op` | Operator permissions | OP |
-| `link.default` | Basic permissions | Everyone |
+|------------|-------------|---------|
+| `link.create` | ➕ Allows creating links | OP |
+| `link.delete` | ❌ Allows deleting links | OP |
+| `link.list` | 📋 Allows viewing the link list | Everyone |
+| `link.reload` | 🔄 Allows reloading the links file | OP |
+| `link.send` | 📨 Allows sending links to other players | OP |
+| `link.me` | 👤 Allows sending links to yourself | Everyone |
+| `link.*` | 🌟 All permissions | OP |
+| `link.op` | 🛡️ Operator-level permissions | OP |
+| `link.default` | ⚙️ Default basic permissions | Everyone |
 
-## Configuration
+## 📦 Installation
+
+1. 📥 Download the latest `.jar` from Modrinth.  
+2. 📂 Place it in your server's `plugins` folder.  
+3. ▶️ Start or reload your server.  
+4. 📝 Configure your links in `plugins/Link-Sender/links.yml`.  
+
+## ⚙️ Configuration
 
 Links are stored in:
 
@@ -73,20 +68,15 @@ links:
   website: https://example.com
 ```
 
-Players can access them with:
+## 📝 Notes
 
-```
-/link discord
-```
+- 👥 Only players can execute link commands.  
+- 💬 Clickable links use Minecraft's Adventure text API for a clean in-chat experience.  
+- ⚙️ Requires Paper server 1.21+ and Java 21.
 
-## Requirements
+## 🛠️ Building from Source
 
-- **Java 21**
-- **PaperMC 1.21+**
-
-## Building from Source
-
-This project uses **Maven**.
+This project uses Maven.
 
 ```
 git clone https://github.com/yourusername/Link-Sender.git
@@ -100,10 +90,22 @@ The compiled plugin will appear in:
 target/Link-Sender-1.3.0.jar
 ```
 
-## Author
+## 🚀 Future ideas
+
+- 🎨 Custom clickable message formats (colors, hover text, prefixes)
+- ⏳ Cooldowns to prevent link spam
+- 🔗 GUI menu to browse and click links easily
+- 🔒 Private links (only visible to specific players or groups)
+- 🎯 Permission-based link visibility
+
+## 👤 Author
 
 Developed by **Wilkcraft**
 
-## License
+## 📄 License
 
 This project is open-source. You may modify and distribute it following the repository license.
+
+---
+
+🚀 Enhance your server by making important links easily accessible to your players!
