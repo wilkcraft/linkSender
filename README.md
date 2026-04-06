@@ -104,7 +104,7 @@ Developed by **Wilkcraft**
 
 ## 📄 License
 
-This project is open-source. You may modify and distribute it following the repository license.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
